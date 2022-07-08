@@ -11,9 +11,9 @@ link = "http://suninjuly.github.io/alert_accept.html"
 try:
     browser = webdriver.Chrome()
     browser.get(link)
-
     btn = browser.find_element(By.CLASS_NAME, "btn")
     btn.click()
+
     time.sleep(1)
 
     confirm = browser.switch_to.alert
