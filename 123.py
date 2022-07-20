@@ -1,16 +1,9 @@
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium import webdriver
+x = int(input()) # надо для сна количество минут
+h = int(input()) # часы, во сколько она ложится спать
+m = int(input()) # минуты, во сколько она ложится спать
 
-browser = webdriver.Chrome()
-
-browser.get("http://suninjuly.github.io/explicit_wait2.html")
-
-# говорим Selenium проверять в течение 5 секунд, пока кнопка не станет кликабельной
-button = WebDriverWait(browser, 12).until(EC.text_to_be_present_in_element((By.ID, "price"), "$100"))
-button1 = browser.find_element(By.ID, "book").click()
+c = (h * 60 + m) + x
 
 
-assert "successful" in message.text
-
+print(c // 60)
+print(c % 60)
